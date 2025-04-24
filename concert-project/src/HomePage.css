@@ -1,0 +1,131 @@
+/* HomePage.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Kanit", sans-serif;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .homepage {
+    display: flex;
+    background: linear-gradient(135deg, #1e1b2e 0%, #3b2e5a 50%, #ff71ce 100%);
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .header {
+    background-color: rgba(43, 37, 63, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: #f35bac;
+    font-weight: bold;
+  }
+  
+  .header-buttons .btn {
+    margin-left: 10px;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 40px 40px;
+    text-align: center;
+  }
+  
+  .headline {
+    font-size: 2.5rem;
+    color: #ff71ce;
+    margin-bottom: 20px;
+  }
+  
+  .subtext {
+    font-size: 1.2rem;
+    color: #e2d8f2;
+    margin-bottom: 50px;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background-color: rgba(48, 39, 68, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ff71ce;
+  }
+  
+  .cta {
+    margin-top: 40px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(43, 37, 63, 0.9);
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #ff71ce;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e658b5;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid #ff71ce;
+    color: #ff71ce;
+  }
+  
+  .btn-outline:hover {
+    background-color: #ff71ce;
+    color: white;
+  }
+  
+  .big {
+    font-size: 1.2rem;
+    padding: 14px 32px;
+    margin-top: 30px;
+  }
