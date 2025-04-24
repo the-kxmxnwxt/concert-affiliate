@@ -1,0 +1,133 @@
+basePath: /
+definitions:
+  handlers.ErrorResponse:
+    properties:
+      message:
+        type: string
+    type: object
+  models.Banner:
+    properties:
+      id:
+        type: string
+      image_url:
+        type: string
+      link:
+        type: string
+    type: object
+  models.Concert:
+    properties:
+      artist:
+        type: string
+      category:
+        type: string
+      date:
+        type: string
+      description:
+        type: string
+      detail_url:
+        type: string
+      id:
+        type: string
+      image_url:
+        type: string
+      location:
+        type: string
+      name:
+        type: string
+      price:
+        type: integer
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: This is the API documentation for the Affiliate Concert Service.
+  title: Affiliate Concert Service API
+  version: "1.0"
+paths:
+  /api/v1/external/banners:
+    get:
+      consumes:
+      - application/json
+      description: ดึงข้อมูลแบนเนอร์ทั้งหมด
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Banner'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Get all banners
+      tags:
+      - Banners
+  /api/v1/external/concerts:
+    get:
+      consumes:
+      - application/json
+      description: ดึงข้อมูลคอนเสิร์ตทั้งหมด
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Concert'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Get all concerts
+      tags:
+      - Concerts
+  /api/v1/external/concerts/search:
+    get:
+      consumes:
+      - application/json
+      description: ค้นหาคอนเสิร์ตโดยระบุชื่อบางส่วน
+      parameters:
+      - description: Search keyword
+        in: query
+        name: q
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Concert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Search concerts by name
+      tags:
+      - Concerts
+schemes:
+- http
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
