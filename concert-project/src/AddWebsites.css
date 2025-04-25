@@ -1,0 +1,105 @@
+body{
+  background: linear-gradient(to bottom right, #2c003e, #ff71ce);
+
+}
+.website-container.modern {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f9fafb;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .website-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .input-group button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-group button:hover {
+    background-color: #4338ca;
+  }
+  
+  .website-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .website-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .website-item:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .website-item button {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .website-item button:hover {
+    background: #dc2626;
+  }
+
+  .website-item span {
+    color: #000;
+  }
+  
+  .message {
+    color: #16a34a;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .empty-state {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+  
