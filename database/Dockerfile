@@ -1,5 +1,5 @@
 # Dockerfile
-FROM postgres:17-alpine
+FROM postgres:16-alpine
 
 # Copy initialization scripts
 COPY init.sql /docker-entrypoint-initdb.d/
