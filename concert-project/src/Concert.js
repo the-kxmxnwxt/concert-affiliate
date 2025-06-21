@@ -11,13 +11,15 @@ const Concerts = () => {
   const [searchTerm, setSearchTerm] = useState("");  // เพิ่ม state สำหรับการค้นหา
 
   useEffect(() => {
+	console.log("Keycloak token:", keycloak.token);
     const fetchConcerts = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/v1/external/concerts", {
+        const res = await axios.get("https://dispatched-blond-resolved-graduated.trycloudflare.com/api/v1/external/concerts", {
           headers: {
             Authorization: `Bearer ${keycloak.token}`,
           },
         });
+	console.log('Concerts:', res.data);
         setConcerts(res.data);
       } catch (err) {
         console.error("Error fetching concerts:", err);

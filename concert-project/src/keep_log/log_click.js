@@ -2,7 +2,7 @@
 
 export const logConcertClick = async (concertId, detailUrl, token, websiteUrl) => {
     try {
-      await fetch('http://localhost:8080/api/v1/logs/click', {
+      await fetch('https://dispatched-blond-resolved-graduated.trycloudflare.com/api/v1/logs/click', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

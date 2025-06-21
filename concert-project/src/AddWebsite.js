@@ -14,7 +14,7 @@ const AddWebsite = () => {
 
   const fetchWebsites = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/v1/websites", {
+      const res = await axios.get("https://dispatched-blond-resolved-graduated.trycloudflare.com/api/v1/websites", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -38,7 +38,7 @@ const AddWebsite = () => {
     setLoading(true);
     try {
       await axios.post(
-        "http://localhost:8080/api/v1/websites",
+        "https://dispatched-blond-resolved-graduated.trycloudflare.com/api/v1/websites",
         { site_url: url },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -56,7 +56,7 @@ const AddWebsite = () => {
   const handleDelete = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:8080/api/v1/websites/${id}`, {
+      await axios.delete(`https://dispatched-blond-resolved-graduated.trycloudflare.com/api/v1/websites/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchWebsites();

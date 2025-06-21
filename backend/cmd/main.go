@@ -18,9 +18,9 @@ import (
 // @title Affiliate Concert Service API
 // @version 1.0
 // @description This is the API documentation for the Affiliate Concert Service.
-// @host localhost:8080
+// @host dispatched-blond-resolved-graduated.trycloudflare.com
 // @BasePath /
-// @schemes http
+// @schemes https
 
 // @securityDefinitions.apikey BearerAuth
 // @in header
@@ -33,10 +33,9 @@ func main() {
 	r := gin.Default()
 
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:3000"},
+		AllowOrigins:     []string{"*"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
 		AllowHeaders:     []string{"Authorization", "Content-Type"},
-		AllowCredentials: true,
 	}))
 
 	r.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))

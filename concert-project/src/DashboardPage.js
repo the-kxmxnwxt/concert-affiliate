@@ -18,7 +18,7 @@ function DashboardPage() {
   useEffect(() => {
     const registerAffiliator = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/register", {
+        const res = await fetch("https://dispatched-blond-resolved-graduated.trycloudflare.com/api/register", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${keycloak.token}`,
@@ -35,7 +35,7 @@ function DashboardPage() {
   
     const fetchClickSummary = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/v1/dashboard/sum-click", {
+        const res = await fetch("https://dispatched-blond-resolved-graduated.trycloudflare.com/api/v1/dashboard/sum-click", {
           headers: {
             Authorization: `Bearer ${keycloak.token}`,
           },

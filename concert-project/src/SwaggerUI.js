@@ -24,7 +24,7 @@ export default function SwaggerPage() {
         <h1 style={{ fontSize: "2rem", marginBottom: "1.5rem", color: "#111827" }}>
           🎤 Affiliate Concert Service API
         </h1>
-        <SwaggerUI url="http://localhost:8080/docs/doc.json" />
+        <SwaggerUI url="https://dispatched-blond-resolved-graduated.trycloudflare.com/docs/doc.json" />
       </div>
     </div>
   )

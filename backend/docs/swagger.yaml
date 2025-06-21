@@ -37,7 +37,7 @@ definitions:
       price:
         type: integer
     type: object
-host: localhost:8080
+host: dispatched-blond-resolved-graduated.trycloudflare.com
 info:
   contact: {}
   description: This is the API documentation for the Affiliate Concert Service.
@@ -124,7 +124,7 @@ paths:
       tags:
       - Concerts
 schemes:
-- http
+- https
 securityDefinitions:
   BearerAuth:
     in: header

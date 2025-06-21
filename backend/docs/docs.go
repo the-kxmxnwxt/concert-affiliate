@@ -213,9 +213,9 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0",
-	Host:             "localhost:8080",
+	Host:             "dispatched-blond-resolved-graduated.trycloudflare.com",
 	BasePath:         "/",
-	Schemes:          []string{"http"},
+	Schemes:          []string{"https"},
 	Title:            "Affiliate Concert Service API",
 	Description:      "This is the API documentation for the Affiliate Concert Service.",
 	InfoInstanceName: "swagger",
