@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+.navbar-container {
+  font-family: 'Prompt', sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #333; /* เปลี่ยนสีเส้นขอบด้านล่างให้เข้ากับพื้นหลังสีดำ */
+}
+
+.navbar-top {
+  background-color: #000; /* เปลี่ยนพื้นหลังเป็นสีดำ */
+  color: #fff; /* เปลี่ยนสีข้อความทั่วไปเป็นสีขาว */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.navbar-brand h1 {
+  color: #fff; /* เปลี่ยนสีข้อความแบรนด์เป็นสีขาว */
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li {
+  position: relative;
+}
+
+.main-menu a {
+  color: #fff; /* เปลี่ยนสีตัวหนังสือของเมนูเป็นสีขาว */
+  text-decoration: none;
+  display: block;
+  padding: 0 25px;
+  font-size: 16px;
+  transition: color 0.3s;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.main-menu a:hover, 
+.main-menu a.active {
+  color: #ccc; /* ปรับสีเมื่อ hover เป็นสีเทาอ่อน */
+  background-color: transparent;
+}
+
+/* เพิ่มเส้นใต้เมื่อ hover */
+.main-menu a:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff; /* เปลี่ยนสีเส้นใต้เป็นสีขาว */
+  transition: width .3s;
+  margin-top: 3px;
+}
+
+.main-menu a:hover:after,
+.main-menu a.active:after {
+  width: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* ปรับเพิ่มการจัดสไตล์ปุ่ม */
+.btn-register-login {
+  background-color: transparent;
+  color: #fff; /* เปลี่ยนสีข้อความปุ่มเป็นสีขาว */
+  border: 2px solid #fff; /* เปลี่ยนสีขอบปุ่มเป็นสีขาว */
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btn-register-login:hover {
+  background-color: #fff; /* เมื่อ hover ให้พื้นหลังเป็นสีขาว */
+  color: #000; /* เมื่อ hover ให้ตัวหนังสือเป็นสีดำ */
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .navbar-top {
+    padding: 15px 20px;
+  }
+  
+  .main-menu a {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-top {
+    flex-wrap: wrap;
+  }
+  
+  .navbar-brand {
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .navbar-center {
+    order: 2;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .navbar-right {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .main-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .main-menu a {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-right {
+    flex-direction: column;
+  }
+  
+  .main-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-menu a {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
